@@ -29,8 +29,8 @@ get "/random/new" do
 end
 
 post "/random/result" do
-  min = params[:min].to_i
-  max = params[:max].to_i
+  min = params[:min].to_f
+  max = params[:max].to_f
   @result = rand(min..max)
   erb :random_result
 end
